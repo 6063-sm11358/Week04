@@ -1,11 +1,21 @@
-function setup() {
+function setup()
+{
   createCanvas(windowWidth, windowHeight);
+  fill(255);
 }
 
-function draw() {
-  background(255);
-  fill(0);
-  rect(width / 2 - width / 40, height / 4 - width / 20, width / 20, height / 2 + width / 10);
-  rect(width / 2.5, height / 4 + height / 2, width - 2 * width / 2.5, width / 20);
-  rect(width / 2 - width / 20 - width / 40, height / 4 - width / 20, width / 20, width / 20);
+let xpos=0;
+
+function draw()
+{
+  background('gold');
+  ellipse(xpos, 50, 50);
+  if(xpos<=windowWidth)
+  {
+    xpos+=10; 
+  }
+  else if(xpos>0)
+  {
+    xpos-=10;
+  }
 }
