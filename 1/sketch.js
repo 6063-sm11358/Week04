@@ -1,21 +1,21 @@
-function setup()
-{
+function setup() {
   createCanvas(windowWidth, windowHeight);
   fill(255);
 }
 
-let xpos=0;
+let xPos = 0;
+let xVelocity = 5;
 
-function draw()
-{
-  background('gold');
-  ellipse(xpos, 50, 50);
-  if(xpos<=windowWidth)
-  {
-    xpos+=10; 
+function draw() {
+  background('darkred');
+  ellipse(xPos, 50, 50, 50);
+
+  xPos = xPos + xVelocity;
+
+  if (xPos > width) {
+    xVelocity = -5;
   }
-  else if(xpos>0)
-  {
-    xpos-=10;
+  if (xPos < 0) {
+    xVelocity = 5;
   }
 }
